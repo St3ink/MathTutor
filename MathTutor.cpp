@@ -26,12 +26,17 @@ int main() {
   int num1 = randomInt(MyEngine);
   int num2 = randomInt(MyEngine);
   int answer = num1 + num2;
- 
-  cout << num1 << " + " << num2 << " = \n";
+  int userAnswer;
   
-  cout << "Press enter to see solution.\n";
-  cin.get();
-  cout << num1 << " + " << num2 << " = " << answer; 
+  cout << num1 << " + " << num2 << " = \n";
+  cout << "Enter your Answer: \n";
+  cin >> userAnswer;
+  cout << "The correct answer is: " << answer << endl; 
+
+  if (userAnswer == answer)
+    cout << "You are correct.\n";
+  else
+    cout << "Your answer is not correct.\n";
 
   return 0;
 }
